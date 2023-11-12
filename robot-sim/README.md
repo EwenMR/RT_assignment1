@@ -29,7 +29,7 @@ If done succesfully this should open a little window of a robot simulator that w
 
 ## Functions
 
-## 'drive(speed, seconds)'
+### 'drive(speed, seconds)'
 
 - Start and stop the motors for the specified duration.
 - Args:
@@ -72,7 +72,7 @@ def turn(speed, seconds):
 
 
 
-## 'find_token()'
+### 'find_token()'
 
 - Find the closest token that hasn't been picked up yet
 - Returns:
@@ -99,7 +99,7 @@ def find_token():
 
 
 
-# 'find_regroup()'
+### 'find_regroup()'
 
 - Find the location of the regrouping of tokens (based on the regroup array)
 - Returns:
@@ -126,7 +126,7 @@ def find_regroup():
 
 
 
-# 'first_time()'
+#### 'first_time()'
 
 - List of code to execute when grabbing the first token. It will allow us to use the first box to be the regrouping point without moving it far.
 
@@ -146,10 +146,14 @@ def first_time():
 
 ## Main program
 
-- Initialises an array to keep track of all the tokens that have been regrouped
-- Initialise 'search' to true and 'first' to 1
+- Initialises an array to keep track of all the tokens that have been regrouped.
+- Initialises 'search' to true and 'first' to 1.
+- Initialises 'x' to 6 which is the number of tokens.
 - The main while loop executes a loop that will make the robot drive to the closest token to get picked up if search is true. If it is the first token being picked up turn around and release it to serve as regrouping point. If token successfully grabbed make 'search' equal to false.
-- This executes the second part of the loop that will go to the token(s) that are found in the regroup array to release the token close to them. Upon release it resumes the process.
+- This executes the second part of the loop that will go to the token(s) that are found in the regroup array to release the token close to them. Upon release it appends the token's code to the regroup array and resumes the process until all tokens have been regrouped.
+
+
+![Flowchart](https://github.com/EwenMR/RT_assignment1/robot-sim/RT_assignment_flowchart.png)
 
 --------------------------------
 
@@ -220,7 +224,7 @@ for m in markers:
 
 ## Future Work
 
-In general this code can be built on.
+In general this code can be built on in many different sectors.
 
 - Additional functions could be made to increase clarity in the main program.
 - A faster route to new tokens could be made using different values for the speeds and times when driving and turning.

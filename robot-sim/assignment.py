@@ -109,8 +109,13 @@ search = True
 # token. We want the first token to become the starting point for the regroupment.
 first = 1
 
+x = 6
 
 while 1:
+
+    if len(regroup) == x:
+        print("All boxes have been gathered together.")
+        break
 
     # we are searching for a token that hasn't been picked up
     if search is True:
@@ -120,7 +125,7 @@ while 1:
 
         # if the robot can't see anything then turn to try find something
         if dist == -1:
-            print("I don't see any token to pick up :)")
+            print("I don't see any token to pick up :(")
             turn(-20,0.5)
 
         # if dist is equal or smaller than the threshold distance then the robot can grab the token
@@ -136,7 +141,7 @@ while 1:
                     first_time()
                     first = 0
                     search = True
-                    
+              
             else:
                 # failed grab error msg and back up to try again
                 print("My hands are too small :)")
