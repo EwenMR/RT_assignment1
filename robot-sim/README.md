@@ -153,7 +153,7 @@ def first_time():
 - This executes the second part of the loop that will go to the token(s) that are found in the regroup array to release the token close to them. Upon release it appends the token's code to the regroup array and resumes the process until all tokens have been regrouped.
 
 
-![Flowchart](https://github.com/EwenMR/RT_assignment1/RT_assignment_flowchart.png)
+![Flowchart](https://github.com/EwenMR/RT_assignment1/tree/master/robot-sim/RT_assignment_flowchart.png)
 
 --------------------------------
 
