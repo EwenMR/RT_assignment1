@@ -10,7 +10,7 @@ Installing and running
 
 To run this code, python3 must be installed alongside some libraries (pygame, PyPyBoxd2D, time, PyYAML). Once all the libraries have been installed you will need to clone this github repository and move to the correct pathway using the commands below:
 
-```c
+```bash
 $ git clone https://github.com/EwenMR/RT_assignment1.git
 ```
 We then move to the robot-sim folder:
